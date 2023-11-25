@@ -1,0 +1,77 @@
+
+---
+title: "Business Intelligence Project"
+author: "Sadiki Hamisi"
+date: "10/09/2023"
+output:
+  github_document: 
+    toc: yes
+    toc_depth: 4
+    fig_width: 6
+    fig_height: 4
+    df_print: default
+editor_options:
+  chunk_output_type: console
+---
+
+# Student Details
+
+|                                              |     |
+|----------------------------------------------|-----|
+| **Student ID Number**                        | 135232 |
+| **Student Name**                             | sadiki Hamisi |
+| **BBIT 4.2 Group**                           | A |
+| **BI Project Group Name/ID (if applicable)** |  |
+
+# Setup Chunk
+
+**Note:** the following KnitR options have been set as the global defaults: <BR> `knitr::opts_chunk$set(echo = TRUE, warning = FALSE, eval = TRUE, collapse = FALSE, tidy = TRUE)`.
+
+More KnitR options are documented here <https://bookdown.org/yihui/rmarkdown-cookbook/chunk-options.html> and here <https://yihui.org/knitr/options/>.
+
+```{r setup, include=FALSE}
+library(formatR)
+knitr::opts_chunk$set(
+  warning = FALSE,
+  collapse = FALSE
+)
+```
+
+# Understanding the Dataset (Exploratory Data Analysis (EDA))
+
+## Loading the Dataset
+
+### Source:
+
+The dataset that was used can be downloaded here: *\<provide a link\>*
+
+### Reference:
+
+*\<Cite the dataset here using APA\>\
+Refer to the APA 7th edition manual for rules on how to cite datasets: <https://apastyle.apa.org/style-grammar-guidelines/references/examples/data-set-references>*
+
+```{r Dataset Loader}
+library(readr)
+
+# Provide the executable R code inside the various code chunks as guided by the lab work.
+```
+
+...to be continued
+
+code for dataset loading.
+
+1. The code begins by loading the `readr` library, which provides functions for reading CSV files and controlling the data types of columns.
+
+2. It reads the CSV file "dataset.csv" located in the "data/transforms/" directory and stores the data in the "stock_ror_dataset" data frame. The `read_csv` function is used for this purpose.
+
+3. Within the `col_types` argument, the code specifies the column data types for the columns in the CSV file. In this case, it focuses on the "Disease" column.
+
+4. The "Disease" column is assigned the data type of a factor using the `col_factor` function. A factor is a data type in R used for categorical variables. It's similar to an enumerated type in other programming languages. Factors are used when you have a fixed set of categories or levels for a variable.
+
+5. The `levels` argument within `col_factor` specifies the possible values or levels that the "Disease" column can take. These levels are provided as a character vector and include various medical conditions.
+
+6. The levels list starts with "Disease" itself, followed by a list of specific medical conditions. The levels appear to be categorized as various diseases and health conditions.
+
+7. Some of the comments in the code (e.g., "# nolint") are comments for code linters or style checkers and do not affect the code's functionality.
+
+Overall, this code is designed to read a CSV file and specify the "Disease" column as a factor variable with predefined levels representing different medical conditions. The levels provide a categorical structure for the data in the "Disease" column, making it easier to work with categorical data in R.
