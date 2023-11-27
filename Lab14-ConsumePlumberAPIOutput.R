@@ -53,7 +53,7 @@ get_disease_predictions <- function(Symptom_1, Symptom_2, Symptom_3, Symptom_4,
   )
   
   # Make a prediction based on the data frame
-  predicted_disease <- predict(loaded_diabetes_model_lda, symptoms_data)
+  predicted_disease <- predict(saved_Diseases_model_lda, symptoms_data)
   
   return(predicted_disease)
 }
